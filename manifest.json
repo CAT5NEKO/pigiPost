@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "ﾋﾟｷﾞﾓﾝｺﾞ発動！",
+  "version": "1.0",
+  "description": "ﾋﾟｷﾞﾓﾝｺﾞを発動するためのボタン",
+  "permissions": ["activeTab", "storage","tabs"],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "ﾋﾟｷﾞﾓﾝｺﾞ発動！",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "icons": {
+    "48": "icon.png"
+  }
+}
