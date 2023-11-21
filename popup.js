@@ -1,10 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("popup.jsでDOMContentLoadedが発火しました。");
+    console.log("popup.jsでDOMContentLoadedが発火しました.");
+
     document.getElementById("postToMisskey").addEventListener("click", function () {
-        console.log("popup.jsでボタンがクリックされました。");
-        browser.runtime.sendMessage({ action: "openMisskeyPostWindow" })
+        console.log("popup.jsでAﾋﾟｷﾞﾓﾝｺﾞ発動ボタンがクリックされました.");
+        browser.runtime.sendMessage({ action: "triggerMisskeyPost" })
             .then(response => {
-                console.log("メッセージを送信しました。");
+                console.log("Misskeyにデータを送信するメッセージを送信しました。");
             })
             .catch(error => {
                 console.error("メッセージの送信をしくじりました。:", error);
